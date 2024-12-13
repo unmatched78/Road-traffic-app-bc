@@ -67,10 +67,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'core.middleware.InactivityLogoutMiddleware',# added middleware to control inactivate logout
+    #'core.middleware.InactivityLogoutMiddleware',# added middleware to control inactivate logout
 ]
 # Optional: Set the inactivity timeout (in seconds)  
-INACTIVITY_TIMEOUT = 1800  # 30 minutes  
+#INACTIVITY_TIMEOUT = 1800  # 30 minutes  
 
 ROOT_URLCONF = 'app.urls'
 
