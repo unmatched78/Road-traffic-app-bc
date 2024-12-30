@@ -17,9 +17,9 @@ Including another URLconf
 from django.contrib import admin  
 from django.urls import path, include  
 from core.views import CreateUserView
-#from. import settings
+from. import settings
 #
-#from django.conf.urls.static import static
+from django.conf.urls.static import static
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView  
 
 urlpatterns = [  
@@ -31,6 +31,6 @@ urlpatterns = [
     path('api/', include('core.urls')),  # Include the quiz URLs here  
 ]
 
-#if settings.DEBUG:
-   # urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
- #   urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
