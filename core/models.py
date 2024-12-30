@@ -3,16 +3,22 @@ from django.contrib.auth.models import User
 import base64  
 from django.core.files.base import ContentFile  
 from django.core.exceptions import ValidationError  
+# django_app/models.py
+from cloudinary.models import CloudinaryField
 
+class Photo(models.Model):
+    
+    # Remove the Django image field when integrating Cloudinary
+    # image = models.ImageField(upload_to='photos/')
 class Aquiz(models.Model):  
     question = models.CharField(max_length=10000, null=True, blank=True)  
-    question_image = models.ImageField(upload_to="images", null=True, blank=True)   
+    question_image = CloudinaryField('image', null=True, blank=True)   
 
 class Zanswer(models.Model):  
     question = models.ForeignKey(Aquiz, related_name='answers', on_delete=models.CASCADE)  
     answer_text = models.CharField(max_length=500, null=True, blank=True)  
     is_correct = models.BooleanField(default=False)  # Default to False to avoid incorrect assumptions  
-    answer_image = models.ImageField(upload_to="images", null=True, blank=True)
+    answer_image =CloudinaryField('image', null=True, blank=True)
     
 
     def __str__(self):  
