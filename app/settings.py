@@ -161,7 +161,7 @@ USE_L10N = True #This setting, when set to True, enables localization of date an
 
 STATIC_URL = 'static/'
 
-STATICFILES_DIRS = [
+STATIC_URL = [
     os.path.join(BASE_DIR, "static"),
 ]
 
