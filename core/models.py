@@ -6,7 +6,7 @@ from django.core.exceptions import ValidationError
 # django_app/models.py
 from cloudinary.models import CloudinaryField
 
-class Photo(models.Model):
+#class Photo(models.Model):
     
     # Remove the Django image field when integrating Cloudinary
     # image = models.ImageField(upload_to='photos/')
