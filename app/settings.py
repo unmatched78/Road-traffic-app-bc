@@ -97,9 +97,9 @@ import cloudinary
 import cloudinary.uploader
 import cloudinary.api	
 cloudinary.config( 
-  	cloud_name = "your_cloud_name",
+  	cloud_name = "dv6jsesp0",
   	api_key = "879745363269744",
-  	api_secret = "your_api_secret"
+  	api_secret = "sLsmYOIK_hSn1XoH_luDXXSa0"
 )
 
 # Database
