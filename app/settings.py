@@ -91,7 +91,15 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'app.wsgi.application'
-
+# settings.py
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api	
+cloudinary.config( 
+  	cloud_name = "your_cloud_name",
+  	api_key = "your_api_key",
+  	api_secret = "your_api_secret"
+)
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
